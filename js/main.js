@@ -19,10 +19,12 @@ class Dibujo {
         }
     }
     sumaIva() {
-        return this.precio * 1.21;
+        let iva = 1.21
+        return this.precio * iva;
     }
     descuentoDiez() {
-        return this.precio - this.precio * 0.10;
+        let descuento = 0.10
+        return this.precio - this.precio * descuento;
     }
 }
 /* END DECLARACION DE CLASE TIPO DIBUJO ES6 */
@@ -47,25 +49,28 @@ switch (tipo) {
     case 1:
         /* LLAMAMOS FUNC FILTRARTIPO EN CASE1 ACUARELA */
         const total2 =filtrarTipo("Acuarela");
-        alert("El total de su compra es: $" + total2);
+        alert("El total de su compra con IVA es: $" + total2);
         break;
     case 2:
         /* LLAMAMOS FUNC FILTRARTIPO EN CASE2 FIBRA EN PAPEL COMÚN */
         const total3 = filtrarTipo("Fibra en Papel Común");
-        alert("El total de su compra es: $" + total3);
+        alert("El total de su compra con IVA es: $" + total3);
         break;
     case 3:
         /* LLAMAMOS FUNC FILTRARTIPO EN CASE3 DIGITAL*/
         const total = filtrarTipo("Digital");
-        alert("Total: " + total + "\nDescuento: " + Math.round(total*0.10*100)/100 + "\n\nTotal a pagar: " + (total-Math.round(total*0.10*100)/100));
+        alert("Total con IVA: " + total + "\nDescuento: " + Math.round(total*0.10*100)/100 + "\n\nTotal a pagar: " + (total-Math.round(total*0.10*100)/100));
         break;
     default:
         break;
 }
+
 /* FUNCION PARA FILTRAR POR TIPO */
 function filtrarTipo(tipo) {
+    
     let filtro = dibujos.filter(dibujo => dibujo.tipo === tipo);
     let nombreDibujo = "";
+    
     for (let index = 0; index < filtro.length; index++) {
         filtro[index].numero = index + 1;
         nombreDibujo += (index + 1) + "." + filtro[index].nombre + "\n";
@@ -73,7 +78,6 @@ function filtrarTipo(tipo) {
     
     const total = elegirNombreDibujo(nombreDibujo, filtro);
     return total;
-    
 }
 
 
@@ -82,6 +86,7 @@ function filtrarTipo(tipo) {
 function elegirNombreDibujo(nombre, filtro) {
     let total = 0;
     let precio, flag = true;
+   
     /* MIENTRAS FLAG */
     while (flag) {
         const escogerDibujo = parseInt(prompt("Ingrese el número del Dibujo que desea:\n \n" + nombre))
@@ -89,15 +94,11 @@ function elegirNombreDibujo(nombre, filtro) {
 
         alert(precio.precio);
         let confirmar = confirm("Deseas elegir otro Dibujo?");
-        if (confirmar) {
-            flag = true;
-        } else {
+        if (!confirmar) {
             flag = false;
-        }
+        } 
         total += precio.precioIva;
     }
     return total;
-    /* ALERT PARA MOSTRAR TOTAL FINAL CON IVA */
-    
 }
  /* END SIMULADOR */
