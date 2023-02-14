@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* HTML */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* END HTML */
+
+/* BODY */
+body{
+    background: linear-gradient(to right, #2c3e50, #fd746c);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+/* END BODY */
+
+/* NAVBAR */
+.navbar{
+    background-color: rgb(46, 45, 46, 0.8);
+    width: 100% !important;
+    height: 8% !important;
+}
+
+.navImg{
+    width: 3rem;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.nav-link{
+    margin-left: 20px;
+    color: #fff !important;
+}
+
+.dropdown-menu{
+    background-color: rgb(46, 45, 46, 0.8) !important;
+}
+
+.dropdown-item{
+    color: #fff !important;
+}
+
+.dropdown-item:hover{
+    color: #000 !important;
+}
+
+/* MODAL */
+.button-modal{
+    color: #dd0b3f;
+    text-decoration: none;
+    position: relative;
+    left: 40rem;
+    background-color: #f8c0be;
+    border: none;
+    font-weight: 700;
+}
+
+.button-modal:hover{
+    background-color: rgb(40, 118, 149);
+    color: #fd746c;
+}
+
+.btn-round{
+    border-radius: 20px;
+    background-color: #fd746c;
+    border: none;
+}
+
+.btn-cerrar{
+    margin-right: 3rem;
+    background-color: #fd746c;
+    color: #2c3e50;
+    border: none;
+}
+
+.btn-cerrar:hover{
+    background-color: #dd0b3f;
+    color: #fff;
+}
+
+.btn-ingresar{
+    margin-left: 3rem;
+    background-color: #2c3e50;
+    color: #fd746c;
+    border: none;
+}
+
+.btn-ingresar:hover{
+    background-color: #34689c;
+    color: #fff;
+}
+
+.modal-container{
+    height: 100%;
+    width: 50%;
+}
+
+.modal-body{
+    height: 100%;
+}
+
+.modal-footer{
+    background-color: #fff;
+}
+/* END MODAL */
+/* END NAVBAR */
+/* CONTENEDOR INDEX */
+.contenedorIndex {
+    background-image: url(../img/arboles.JPEG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    object-fit: cover;
+}
+
+.subtitulo--modif{
+    color: rgb(190, 15, 53);
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.logo-lilith{
+    width: 10rem;
+    position: relative;
+    top: 20vh;
+    right: 60vh;
+    box-shadow: 2px 2px 4px #000000;
+}
+/* END CONTENEDOR INDEX */
+
+/* INDEX */
+
+.sectionIndex{
+    height: 140vh;
+}
+
+.contenedorTitulo{
+    color: rgb(70, 68, 68);
+}
+
+.contenedorTitulo--grande{
+    color: #fff;
+    margin-bottom: 3rem !important;
+    margin-top: 3rem !important;
+}
+
+
+/* END INDEX */
+
+
+
+/* CARDS */
+.container{
+    width: 180vh;
+    margin: 0 auto;
+}
+
+.card{
+    width: 20rem !important;
+    height: 50% !important;
+    margin-top: 4rem;
+    display: inline-block;
+    margin: 0.5rem;
+    background-color: transparent;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tituloProductos{
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.nombre-dibujo{
+    font-size: 30px;
+}
+
+.precio{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.comprar-dibujo{
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    background: #fd746c;
+    color: #2c3e50;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.comprar-dibujo:hover{
+    cursor: pointer;
+    background-color: #34689c;
+    color: #fd746c;
+}
+
+/* END CARDS */
+
+/* CARRITO DE COMPRAS */
+
+.carrito{
+    margin-bottom: 50px;
+}
+
+.tituloCarrito{
+    margin-top: 8rem;
+    color: #fff;
+}
+
+.compraNombre{
+    color: #fff;
+    margin: 1rem;
+}
+
+.compraPrecio{
+    color: #fff;
+    margin: 1rem;
+}
+
+.compraImg{
+    /* height: 5rem; */
+    width: 200px;
+}
+
+thead, tr {
+    text-align: center;
+}
+
+.listado-compras div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 3rem;
+    align-items: center;
+}
+
+.listado-compras tr td {
+    width: 150px;
+}
+
+.listado-compras tr td:first-child{
+    width: 50px;
+}
+
+.listado-compras tr td img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.listado-compras .precio-compra{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+
+/* END CARRITO DE COMPRAS */
+/* NOSOTROS */
+
+.contenedorNosotros{
+    height: 100vh;
+}
+
+.contenedorImagen--rounded{
+    position: relative;
+    right: 6rem;
+    border-radius: 50%;
+    width: 60%;
+    cursor: pointer;
+    bottom: 2rem;
+}
+
+.tituloNosotros{
+    margin-bottom: 5rem;
+    color: #fff;
+}
+
+.contenedorParrafo{
+    font-size: 2rem;
+}
+
+.contenedorFirma{
+    font-weight: 900;
+    margin-left: 10rem;
+}
+
+/* END NOSOTROS */
+
+/* CONTACTO */
+
+.feedback{
+    color: #fff;
+    margin-bottom: 2rem;
+
+}
+
+label{
+    color: #fff;
+}
+.container__feed{
+    height: 100vh;
+}
+
+.btn-pulse{
+    background-color: #fd746c;
+    color: #2c3e50;
+}
+
+.btn-pulse:hover{
+    background-color: #34689c;
+    color: #ff95b0;
+}
+
+/* END CONTACTO */
+
+/* FOOTER */
+
+.footerBack{
+    background-color: #2c3e50;
+}
+
+/* END FOOTER */
+
